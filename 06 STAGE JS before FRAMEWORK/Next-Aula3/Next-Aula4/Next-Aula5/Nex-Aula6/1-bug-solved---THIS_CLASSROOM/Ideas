@@ -1,0 +1,10 @@
+#Using this part of code to build future projjects talking about Internet Conection Redes de computadores
+        const pathname = window.location.pathname   looks like to know the ip 
+
+        Object Global     windown
+            .Object      .location
+             .methods    .pathname
+
+
+
+             

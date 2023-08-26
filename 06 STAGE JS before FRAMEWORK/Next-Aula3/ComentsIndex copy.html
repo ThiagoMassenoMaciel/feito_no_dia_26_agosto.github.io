@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPA</title>
+</head>
+<body>
+    <nav>
+        <!--you dont need to passin arguments cuz the property already is  own event--> 
+        <a href="/" onclick="router() "  >Home</a>
+        <a href="/about" onclick="router() "  >Sobre</a>
+        <a href="/contact" onclick="router() "  >Contato</a>
+        <a href="/404." onclick="router() "  >404</a>
+    </nav>
+    spa 
+<!--Quando a pessoa cxlicar no link do nav trocar so a pagina html dentro da div APP-->
+
+    <div id="App">
+
+    </div>
+ <!--- Verify if i pass some event or get the event that happens on a window ( object element global)---->
+  <!---N deixar que o evento dispar por padrão ---->
+  <!--- Prevent default for not disparar after click on the link ---->
+
+    <script>
+        const routes = {
+        "/"          :   "/pages/home.html",
+        "/about"     :"/pages/about.html",
+        "/contact"   : "/pages/contact.html" ,
+        404          : "/pages/404.html",
+        }
+        function router(event){
+            //capturat event for not default 
+            event = event || window.event
+            event.preventDefault() // this not make link clickable
+
+        // Eu quero colocar o valor do href do elemento clicado para dentro do histórico da janela (pagina html) 
+            window.history.pushState({} , '' , event.target.href)  // vai exibir no console 
+        // janela.historico.empurrarESTADO( dado , texto , url do link = valor do href )
+// chamei o handle para a função que vai exibir o nome do caminho depois de executado o evento 
+            handle()
+        }
+// handle its like manipular atraves do link "/LastName-file" no path acessar todo o path 
+        function handle(){
+
+  //          const pathname = window.location.pathname // this will return where are the name of last root child i am 
+                                                                          // rootAVÔ/rootPAI/rootFILHO
+
+//same thing equal line 48 this file  
+//        i wanna get property pathname from .location and return value for into the braces as typed const   
+// desestruturei i location pra pegar so o pathname dele                                                                          
+         const{pathname} = window.location 
+
+            // dentro do location temos muitas funcionalidades : uma delas é o pathname
+
+
+//#exibir no console.log o valor do href daquele link a clicado
+            console.log(pathname)
+        }
+    </script>
+</body>
+</html>

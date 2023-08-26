@@ -1,0 +1,40 @@
+Links will not out the index.html but 
+will put other pages html into the div#APP (vai injetar dentro da div )
+
+
+
+into the tag html   property    
+onclick = "namefunction()"
+
+its equal 
+
+var = document.querySelector('nav a:nth-child(1)')
+
+
+
+
+
+var.addEventListener("click", nameFunction( )=>{ } ) 
+
+../../../file.html
+FileFolder1/FileFolder2/FileFolder3/LastName-file
+
+each link href   = Last name file host that specific pagehtml
+
+create object whith properties   = "/LastName-file"
+and values equal all the path    = FileFolder1/FileFolder2/FileFolder3/LastName-file.html
+
+#exibir no console.log o valor do href daquele link a clicado
+                                guardar o valor do href|      .href   
+                                                __/
+                        Do elemento html clicado|         .target 
+                                        __/              
+             do evento click registrado|             event
+
+
+    window.history.pushState({} , '' , event.target.href)
+
+
+# Destruturar - tirar de dentro do objeto 
+        o mesmo que fiz na linha 53 do file index  
+        // desestruturei i location pra pegar so o pathname dele     

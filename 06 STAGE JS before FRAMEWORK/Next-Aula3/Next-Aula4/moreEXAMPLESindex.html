@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPA</title>
+</head>
+<body>
+    <nav> 
+        <a href="/" onclick="router() "  >Home</a>
+        <a href="/about" onclick="router() "  >Sobre</a>
+        <a href="/contact" onclick="router() "  >Contato</a>
+        <a href="/404." onclick="router() "  >404</a>
+    </nav>
+    
+
+    <div id="App">
+        spa 
+    </div>
+
+    <script>
+
+        const routes = {
+        "/"          :   "/pages/home.html",
+        "/about"     :"/pages/about.html",
+        "/contact"   : "/pages/contact.html" ,
+        404          : "/pages/404.html",
+        }
+
+        function router(event){
+
+            event = event || window.event
+            event.preventDefault()  
+            window.history.pushState({} , '' , event.target.href)  
+            handle()
+        }
+
+        function handle(){
+                                                              
+         const {pathname, href, host , port} = window.location
+
+            console.log( "pathname: " + pathname);
+            console.log( "href: " + href)
+            console.log( "host: " + host)
+            console.log( "port: " + port)
+
+        }
+    </script>
+</body>
+</html>

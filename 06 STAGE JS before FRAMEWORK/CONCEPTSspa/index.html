@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPA</title>
+</head>
+<body>
+    <nav>
+        <!--you dont need to passin arguments cuz the property already is  own event--> 
+        <a href="index.html" onclick="router() "  >Home</a>
+        <a href="./pages/about.html" onclick="router() "  >Sobre</a>
+        <a href="./pages/contact.html" onclick="router() "  >Contato</a>
+        <a href="./pages/404.html" onclick="router() "  >404</a>
+    </nav>
+    spa 
+<!--Quando a pessoa cxlicar no link do nav trocar so a pagina html dentro da div APP-->
+
+    <div id="App">
+
+    </div>
+ <!--- Verify if i pass some event or get the event that happens on a window ( object element global)---->
+  <!---N deixar que o evento dispar por padrão ---->
+  <!--- Prevent default for not disparar after click on the link ---->
+
+    <script>
+        function router(event){
+            event = event || window.event
+            event.preventDefault() // this not make link clickable
+
+        }
+    </script>
+</body>
+</html>

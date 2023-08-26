@@ -1,0 +1,6 @@
+index.js:10 new object created  Router {PAGESpath: {…}}
+router.js:11 Uncaught TypeError: Cannot read properties of undefined (reading 'preventDefault')
+    at Router.route (router.js:11:7)
+    at index.js:13:5
+route @ router.js:11
+(anonymous) @ index.js:13

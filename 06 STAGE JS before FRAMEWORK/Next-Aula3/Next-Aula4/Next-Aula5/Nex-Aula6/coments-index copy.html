@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPA</title>
+</head>
+
+<body>
+    <!--Everytime is clicked one of this a tag ON JS ARE CALLED FUNCTION ROUNTER()-->
+    <nav> 
+        <a href="/" onclick="router() "  >Home</a>
+        <a href="/about" onclick="router() "  >Sobre</a>
+        <a href="/contact" onclick="router() "  >Contato</a>
+        <a href="/404." onclick="router() "  >404</a>
+    </nav>
+
+    <div id="App">
+    
+    </div>
+
+    <script>
+//Map  apelido | seu path
+        const routes = {
+        "/"          :   "/pages/home.html",
+        "/about"     :"/pages/about.html",
+        "/contact"   : "/pages/contact.html" ,
+        404          : "/pages/404.html",
+        }
+//register the href after click on button even have preventDefault
+        function router(event){
+
+            event = event || window.event
+            event.preventDefault()  
+            window.history.pushState({ } , "" , event.target.href)  
+            handle()
+        }
+//Fetch then 
+        function handle(){    
+
+         const {pathname} = window.location
+         const route = routes[pathname]  || routes[404]
+         
+         console.log("\nAntes do fetch")
+         fetch(route)
+         .then( data =>  data.text()                                       )
+         // put path from new page(link clicked) into the DOM               
+         .then( html =>  document.querySelector('#App').innerHTML = html   )
+         console.log("showing route from link clicked :\n\n", route)
+        }
+//Will be read path Two times :    T¹ when alink is clicked      T² when the script are executing
+        handle()
+        window.onpopstate = () => handle() ;    //When click button go back change to last pageHtml clicked 
+    </script>
+</body>
+</html>

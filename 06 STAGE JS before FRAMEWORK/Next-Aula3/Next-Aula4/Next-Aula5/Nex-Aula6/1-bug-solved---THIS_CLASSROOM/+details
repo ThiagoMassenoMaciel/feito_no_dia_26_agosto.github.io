@@ -1,0 +1,242 @@
+1-Conceitos de SPA
+        VER TÓPICOS RELACIONADOS
+        Descrição
+        Nessa aula aprenderemos os conceitos do SPA, a diferença entre uma aplicação que não utiliza e outra que utiliza essa tecnologia.
+
+2-Alterando comportamento padrão do evento de redirecionamento
+        VER TÓPICOS RELACIONADOS
+
+        Descrição
+        Nessa aula começaremos a entender o comportamento de eventos no JavaScript e os conceitos de rotas em uma página web. Alteraremos o comportamento de redirecionamento utilizando o evento event.preventDefault().
+
+3-Mapeando as rotas
+        VER TÓPICOS RELACIONADOS
+        Descrição
+        Nessa aula mapearemos todas as rotas do nosso projeto, para isso faremos uma nova função e utilizaremos algumas propriedades do JavaScript para nos auxiliar.
+
+
+        []¹ 
+        desabilitou o desparo automatico com o event.preventDefault()
+                por este motivo n disparar o pathname ficava igual da index.html 
+        []² 
+        colocou no historico da janela(console.log) q esta mudando de pagina mostrando o pathname SEM MEXER NA WINDOW do usewr 
+
+4-  Javascript Assíncrono e Promises
+CONTENT-12'
+PRACTICE-1H30'
+        #DUVIDAS
+                why the promissed 2 return undefined when i decide return into console.log the promise 1 ?  
+                look at the file EX-4-index.html
+                when the promisse 2 not return undefined
+                look at the file EX-4-1-index.html
+
+        VER TÓPICOS RELACIONADOS
+
+        Descrição
+        Nessa aula aprenderemos sobre Assíncronismo e Promises no JavaScript, utilizaremos a função fetch() do JS para retornar os dados do nosso projeto.
+
+        Código zipado
+
+        acessando valor de uma propriedade do objeto
+        valor = NOMEdoOBJETO[nomeDApopriedade]
+
+        exemplo pra aula 36 e 37 são a mesma coisa 
+        let path_home = routes["/home"]
+        let path_home = routes[pathname]
+
+        #Explicndo sincrono atrapalha o (fluxo de codigo )
+                um executa exatamente depois do outro 
+                se o do meio demorar 3 segundos o ultimo tambem vai ficar esperando 3 segundos
+
+                console.log("iniciei")
+                setTimeout(()=>{ console.log("executei a função assincrona")} ,200)
+                console.log("terminei")
+
+                vai exibir assim
+                ________________
+                iniciei
+                executei a função assincrona
+                terminei 
+
+
+
+
+        #Explicando assincrono  não atrapalha o ( fluxo de codigo )
+        fetch(prometo pegar essa coisa ).then(prometo executar issso depois de pegado a coisa )
+        \__ WILL ALWAYS RETURN SOME PROMISSES
+                O java script vai executando e no meio do caminho encontrar uma função que precisará esperar 
+                ele continua executando o resto até executa assincrona quando ela tiver pronta 
+
+
+                console.log("iniciei")
+                setTimeout(()=>{ console.log("executei a função assincrona")} ,200)
+                console.log("terminei")
+
+                vai exibir assim 
+
+                iniciei
+                terminei 
+                executei a função assincrona
+
+        #resumo ordem de execuçõ do handle + fetch assincrono 
+
+        console1
+        console2
+        fetch().then().then()
+
+        console1 registou o path do link clicado acessando o objeto
+        console2 exibiu o path registrado
+        pegou o (path) retornou 2 promise - converteu dados para text - exibiu o html  
+
+5-Finalizando as funcionalidades e reorganizando a aplicação
+Content 7' 
+practice 53'
+
+                VER TÓPICOS RELACIONADOS
+                Descrição
+                Nessa aula finalizaremos as funcionalidades e reorganizaremos a nossa aplicação transformando o JS em módulos.
+                Código zipado
+
+                #Executar o handle 2 vezes     click link  initial ppage home 
+                handle()
+                 window.onpopstate = () => handle() ;
+
+                ERROR INITIALIZED
+                        Error initialize, Cuz the function router are not executing event default -Must to put INTO ONCLICK TAG                
+                        window_rounter   
+                        or
+                        into the script put 
+                        window_rounter =  call function to rounter()
+
+6-Orientação a Objetos no JavaScript
+
+
+CONTENT-9'35"
+PRACTICE-1h10'
+
+
+        VER TÓPICOS RELACIONADOS
+
+        this Aponta para o objeto construido por esta classe 
+
+        Descrição
+        Nessa aula aprenderemos sobre os princípios da POO (Programação Orientada a Objetos). Aprofundaremos em Classes e o valor this.
+
+        #Maneiras de declarar o Objeto no Js 
+
+                #Object literal 
+                        const NameVariable = {
+                                porperty : value ,
+
+                                method(){
+
+                                }
+
+                                method: () =>{  }
+
+                                method: function NameFunction(){
+
+                                }
+                        }
+
+(link)[https://tommiranda.com.br/javascript/5-formas-de-se-criar-objetos-no-javascript/#:~:text=%22%0A%20%20%7D%0A%7D-,Factory%20Functions,)%0A%0Afusca.cor%20//%20Preto%0Acamaro.cor%20//%20Amarelo,-Fun%C3%A7%C3%B5es%20construtoras%20s%C3%A3o]
+
+                #Factory FunctionsPermalink
+                        A forma mais simples de criar um objeto é utilizando a sintaxe acima. Geralmente ela é utilizada quando teremos apenas 
+                        um objeto do tipo criado. Outra forma, é utilizando funções construtoras:
+
+                        primeiro cria funcão 
+
+                        segundo construa objeto comando new para dentro de uma variavel
+
+                        function Pessoa (nome, idade, nascimento) {
+                                this.nome = nome
+                                this.idade = idade
+                                this.nascimento = nascimento
+                        }
+
+                        function Carro (cor, ano, dono) {
+
+                                        this.cor = cor
+                                        this.ano = ano
+                                        this.dono = dono
+
+                                        this.ligar = function () {
+                                        return this.dono + " ligou o carro"
+                                        }
+
+                                        this.andar = function () {
+                                                return "O carro " + this.cor + " está andando"
+                                        }
+                        }
+
+                        var joao = new Pessoa("João", 25, "01/08/1992")
+                        var camaro = new Carro("Amarelo", 2016, joao)
+                        var fusca = new Carro("Preto", 1971, joao)
+
+                        fusca.cor // Preto
+                        camaro.cor // Amarelo
+
+
+                #IN order to write control c + control v diferentes groups of path 
+                Decide to create a model (FORM) to not repeat 
+
+                | in order to declare objects literaly 
+                        
+                       |create class   
+                        and new objects    
+                        putValues on each property acessing 
+                        by 
+                        Class Object.property
+
+                in order to make this
+                                const routes1 = {
+                                        "/"          : "/pages/home.html",
+                                        "/about"     : "/pages/about.html",
+                                        "/contact"   : "/pages/contact.html" ,
+                                        404          : "/pages/404.html",
+                                } 
+
+                                const routes2 = {
+                                        "/"          : "/pages/h.html",
+                                        "/t"         : "/pages/t.html",
+                                        "/c"         : "/pages/c.html" ,
+                                        4            : "/pages/4.html",
+                                } 
+
+                                const routes2 = {
+                                        "/a"         : "/pages/a.html",
+                                        "/b"         : "/pages/b.html",
+                                        "/d"         : "/pages/d.html" ,
+                                        10           : "/pages/10.html",
+                                } 
+                make this FORM¹  ATRIBUATTING² VALUES + PROPERTY
+
+                                class Router(){
+                                        "page" : "path"
+                                }
+
+                                constRounter
+
+7-Mais conceitos de Orientação a Objetos
+11:07
+
+1h25'
+
+
+
+
+
+
+
+
+
+
+7-
+
+8-
+
+9-
+
+10-
+

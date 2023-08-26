@@ -1,0 +1,290 @@
+Stage 05  M1, M2, M3 
+
+Conteúdo do módulo 1
+Jogo da adivinhação
+13 aulas
+01:21:36
+
+
+Clique para marcar/desmarcar aula como vista
+            Introdução - Projeto Jogo da Adivinhação
+            00:52
+
+
+            Figma do Projeto
+
+            Iniciando HTML e CSS
+            08:38
+
+
+            Fontes e Textos
+            04:17
+
+
+            Input e Button
+            03:45
+
+
+            Finalizando telas
+            04:41
+
+
+            Introdução a DOM
+            05:15
+
+
+            PDF - Introdução a DOM
+
+            Manipulando a DOM
+            07:52
+
+
+            PDF - Manipulando elementos
+
+            Capturando valor do formulário ao clicar no botão
+            05:45
+
+
+            Aplicando a lógica
+            07:40
+
+
+            Eventos
+            07:17
+
+
+            PDF - Eventos
+
+            Aplicando eventos e callbacks
+            09:57
+
+
+            Revisão
+            05:36
+
+
+            Refatorando e algumas funcionalidades a mais
+            10:01
+
+
+            Biscoito da Sorte - Extra
+
+
+
+
+
+
+
+
+
+
+
+Projeto IMC    20 aulas 
+02:08:49                Introdução
+                        01:03
+
+
+                        Figma do Projeto
+
+                        Iniciando o projeto
+                        03:58
+
+
+                        Estilizando o cartão
+                        06:04
+
+
+                        Configurando fontes e cores
+                        06:41
+
+
+                        Criando o HTML do formulário
+                        04:54
+
+
+                        Aplicando estilos ao formulário
+                        06:14
+
+
+                        Finalizando estilos do formulário
+                        06:39
+
+
+                        Criando o modal
+                        07:41
+
+
+                        Construindo a caixa de alerta de erro
+                        04:31
+
+
+                        Iniciando o JavaScript com o evento de submit
+                        09:20
+
+
+                        Apresentando o resultado do IMC no popup
+                        10:08
+
+
+                        Estruturando os dados do Modal
+                        06:56
+
+
+                        ES6 Modules
+                        18:33
+
+
+                        PDF - ES6 Modules
+
+                        Cheat Sheet - Import/Export
+
+                        Modularizando o Modal popup
+                        07:27
+
+
+                        Fechando modal pelo teclado
+                        05:34
+
+
+                        Validando dados
+                        06:54
+
+
+                        Modularizando a caixa de alerta de erro
+                        04:32
+
+
+                        Modularizar as funções utilitárias
+                        01:43
+
+
+                        Refatorando a função de submit, aplicando regras de Clean Code
+                        06:42
+
+
+                        Desafio
+                        03:15
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Focus Timer 24 aulas
+01:44:34            Apresentação do projeto
+                    03:51
+
+
+                    Figma - Focus Timer
+
+                    Estruturando o HTML
+                    05:10
+
+
+                    Adicionando ícones
+                    03:18
+
+
+                    Iniciando os estilos e variáveis
+                    04:44
+
+
+                    Estilizando o relógio e botões
+                    03:48
+
+
+                    CSS not para remover botões da tela
+                    04:00
+
+
+                    Estilos para o light mode
+                    05:23
+
+
+                    Adicionando acessibilidade aos botões
+                    04:04
+
+
+                    Adicionando a lógica do ligh mode
+                    08:21
+
+
+                    Construindo o módulo FocusTimer
+                    03:04
+
+
+                    Criando o estado da aplicação
+                    02:41
+
+
+                    Registrando eventos dos botões
+                    04:03
+
+
+                    Dataset para controle das ações
+                    04:10
+
+
+                    Conectando as primeiras ações
+                    03:56
+
+
+                    Alterando o estado da apliação conforme a ação
+                    05:03
+
+
+                    Atualizando o display do contador
+                    07:09
+
+
+                    Estruturando o countdown
+                    05:40
+
+
+                    Lógica do countdown
+                    07:41
+
+
+                    Alterando contéudo de uma tag com contenteditable
+                    01:02
+
+
+                    Limpando o conteúdo de uma tag com evento de focus
+                    01:37
+
+
+                    Aceitando apenas números no contador
+                    03:39
+
+
+                    Finalizando a escolha dos minutos do temporizador
+                    03:49
+
+
+                    Adicionando sons na aplicação
+                    06:15
+
+
+                    FocusTimer finalizado
+                    02:06
+
+
+                    Quiz 01
+
+                    FocusTimer
+
+                    Autoavaliação

@@ -1,0 +1,5 @@
+N esta executando a funcão route()
+pois seu nome na tag html é diferente do que tem no script js
+
+onclick="router()" !== route()
+Remova a função router() do atributo onclick dos links, já que ela não estava definida.

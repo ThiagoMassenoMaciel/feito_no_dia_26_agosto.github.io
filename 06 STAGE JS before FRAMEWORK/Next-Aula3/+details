@@ -1,0 +1,44 @@
+1-Conceitos de SPA
+        VER TÓPICOS RELACIONADOS
+        Descrição
+        Nessa aula aprenderemos os conceitos do SPA, a diferença entre uma aplicação que não utiliza e outra que utiliza essa tecnologia.
+
+2-Alterando comportamento padrão do evento de redirecionamento
+        VER TÓPICOS RELACIONADOS
+
+        Descrição
+        Nessa aula começaremos a entender o comportamento de eventos no JavaScript e os conceitos de rotas em uma página web. Alteraremos o comportamento de redirecionamento utilizando o evento event.preventDefault().
+
+3-Mapeando as rotas
+        VER TÓPICOS RELACIONADOS
+        Descrição
+        Nessa aula mapearemos todas as rotas do nosso projeto, para isso faremos uma nova função e utilizaremos algumas propriedades do JavaScript para nos auxiliar.
+
+
+        []¹ 
+        desabilitou o desparo automatico com o event.preventDefault()
+                por este motivo n disparar o pathname ficava igual da index.html 
+        []² 
+        colocou no historico da janela(console.log) q esta mudando de pagina mostrando o pathname SEM MEXER NA WINDOW do usewr 
+
+4-  Javascript Assíncrono e Promises
+
+        VER TÓPICOS RELACIONADOS
+
+        Descrição
+        Nessa aula aprenderemos sobre Assíncronismo e Promises no JavaScript, utilizaremos a função fetch() do JS para retornar os dados do nosso projeto.
+
+        Código zipado
+
+5-
+
+6-
+
+7-
+
+8-
+
+9-
+
+10-
+

@@ -1,0 +1,80 @@
+#Diferents ways to conect 
+a clicked 
+and 
+function into the scrip run 
+
+
+  ##############################################################
+  in tag html 
+    onclick= NameFunctionFromScript()
+  in javascript 
+    
+    index.js 
+    import {declaration} from './router.js' 
+
+    router.js
+    export  function NameFunctionFromScript(){}
+
+  ###############################################################
+
+  in tag html 
+    onclick= window.NameFunctionFromScript()
+  in javascript 
+    
+    index.js 
+    import {declaration} from './router.js' 
+
+    router.js
+    export  function NameFunctionFromScript(){}
+
+  ###############################################################
+
+  in tag html 
+    onclick= NameFunctionFromScript()
+  in javascript 
+    
+    index.js 
+    import {declaration} from './router.js' 
+    window.route = function callFunction(){  object.route() }
+
+    router.js
+    export  function NameFunctionFromScript(){}
+
+
+
+
+
+
+Modificação no código
+Aula em: Stage 06 - Javascript antes do framework › Conceitos de SPA › Mais conceitos de Orientação a Objetos
+Ao abrir o index.html pelo live server ele vai diretamente para:
+
+http://127.0.0.1:5500/index.html
+
+mas de acordo com o código abaixo:
+
+const { pathname } = window.location
+const route = this.routes[pathname] || this.routes[404]
+O pathname é undefined, então ele pega a rota 404, que na minha visão é errado, pois na abertura inicial ele deveria buscar a home.html. Sendo assim, eu adicionei o IF abaixo e parece que deu certo, mas não sei se tem outra forma de corrigir isso:
+
+handle() {
+        const { pathname } = window.location
+        let route
+        if(pathname === "/index.html") {
+            route = this.routes["/"]
+        } else {
+            route = this.routes[pathname] || this.routes[404]
+        }
+        fetch(route)
+        .then(data => data.text())
+        .then(html => {
+            document.querySelector("#app").innerHTML = html
+        })
+    }
+(1) COMENTAR
+RESPONDER
+Allan Cardoso Garcia
+26/04/23 às 10:01
+RESPONDER
+
+No caso, acredito que você possa usar um ternário para diminuir o tamanho do código com if sendo que já sabe os dois caminhos.
